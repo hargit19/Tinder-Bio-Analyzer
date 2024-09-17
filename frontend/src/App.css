@@ -1,0 +1,213 @@
+/* Background Container */
+.background-container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #000; /* Dark background to enhance star effect */
+}
+
+/* Creating Stars */
+
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Darker overlay */
+}
+
+/* Main Container */
+.container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.8); /* Darker background for the container */
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  animation: fadeIn 2s ease;
+}
+
+/* Logo Header */
+.logo-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 15px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #FF416C;
+  font-weight: bold;
+  letter-spacing: 1px;
+  animation: bounceIn 1s ease;
+}
+
+/* Upload Form */
+.upload-form {
+  margin-bottom: 20px;
+}
+
+.upload-box {
+  margin: 20px 0;
+}
+
+.inputfile {
+  display: none;
+}
+
+.cloudinary-button, .analyze-btn {
+  background: linear-gradient(45deg, #FF416C, #FF4B2B);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 300px;
+  margin: 10px auto;
+}
+
+.cloudinary-button:hover, .analyze-btn:hover {
+  transform: scale(1.05);
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+}
+
+/* Result Card */
+.result-container {
+  margin-top: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.card {
+  background: #333;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.score-text {
+  font-size: 2.5rem;
+  color: #FF416C;
+  font-weight: bold;
+  margin-bottom: 10px;
+  animation: scorePulse 1s infinite ease;
+}
+
+.feedback-area {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #444;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  /* color: #FF4B2B; */
+  color: white;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* API Key Input */
+.input-group {
+  margin: 20px 0;
+}
+
+.api-key-input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #555;
+  font-size: 1rem;
+  outline: none;
+  margin: 0 auto;
+  display: block;
+  transition: border-color 0.3s ease;
+  background: #222;
+  color: #eee;
+}
+
+.api-key-input:focus {
+  border-color: #FF416C;
+}
+
+/* Loading Message */
+.loading-message {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #FF416C;
+  font-weight: bold;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animations */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scorePulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
